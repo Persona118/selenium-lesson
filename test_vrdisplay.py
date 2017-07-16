@@ -10,10 +10,15 @@ http://coreygoldberg.blogspot.com/2011/06/python-headless-selenium-webdriver.htm
 from pyvirtualdisplay import Display
 from selenium import webdriver
 
+chromeDriver = r"C:\Devs\Python\chromedriver.exe"
 display = Display(visible=0, size=(800, 600))
 display.start()
 
-driver = webdriver.Chrome()
-driver.get("http://christopher.su")
+# Chrome launches in virtual display
+# invisible to user
+driver = webdriver.Chrome(chromeDriver)
+driver.get("https://www.bbc.co.uk")
 print(driver.title)
+dirver.quit()
 
+display.stop()
