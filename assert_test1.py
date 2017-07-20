@@ -22,7 +22,7 @@ class PythonOrgSearch(unittest.TestCase):
         pageElem.send_keys("pycon")
         pageElem.send_keys(Keys.RETURN)
         assert "No results found." not in browser.page_source
-        sleep(3)
+        sleep(2)
 
     def tearDown(self):
         self.driver.close()
